@@ -3,14 +3,14 @@
 require 'tmpdir'
 require 'stringio'
 
-begin
-  require 'zip/zipfilesystem'
-  Roo::ZipFile = Zip::ZipFile
-rescue LoadError
-  # For rubyzip >= 1.0.0
-  require 'zip/filesystem'
-  Roo::ZipFile = Zip::File
-end
+#begin
+  #require 'zip/zipfilesystem'
+  #Roo::ZipFile = Zip::ZipFile
+#rescue LoadError
+  ## For rubyzip >= 1.0.0
+  #require 'zip/filesystem'
+  #Roo::ZipFile = Zip::File
+#end
 
 # Base class for all other types of spreadsheets
 class Roo::Base
